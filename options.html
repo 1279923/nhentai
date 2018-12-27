@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)https://nhentai.net/favorites/ -->
+<html lang="en" class=" theme-black"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+
+		
+			<meta name="theme-color" content="#1f1f1f">
+		
+		
+		
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, viewport-fit=cover">
+
+		
+
+		<title>Nhentai manager options</title>
+
+		<link rel="stylesheet" href="font-awesome.min.css">
+		<link rel="stylesheet" href="css">
+		<link rel="stylesheet" href="main_style.6f384bf62b00.css">
+		
+
+		
+		<script src="options.js"></script>
+		
+		<style>
+		@font-face { font-family: FontAwesome; src: url('fonts/fontawesome-webfont.ttf');}
+		
+		
+		.third-level-menu
+		{
+			position: absolute;
+			top: -3px;
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			display: none;
+			z-index: 1000;
+			border-top: 3px solid #444444;
+		}
+
+		.third-level-menu > li
+		{
+			height: 53px;
+			border-right: 3px solid #444444;
+			border-left: 3px solid #444444;
+			border-bottom: 3px solid #444444;
+			z-index: 1000;
+		}
+		.third-level-menu > li:hover { cursor: pointer }
+
+		.second-level-menu
+		{
+			position: absolute;
+			top: 50px;
+			left: 0;
+			width: 200px;
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			display: none;
+			z-index: 1000;
+			border-top: 3px solid #444444;
+		}
+
+		.second-level-menu > li
+		{
+			position: relative;
+			height: 53px;
+			width: 200px;
+			border-right: 3px solid #444444;
+			border-left: 3px solid #444444;
+			border-bottom: 3px solid #444444;
+			z-index: 1000;
+		}
+		.second-level-menu > li:hover {  }
+
+		.top-level-menu
+		{
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			position: relative;
+			z-index: 100;
+		}
+		.big > li { width: 200px; }
+		.big{
+			right: -200px;
+			width: 200px;
+		}
+		.med > li { width: 150px; }
+		.med{
+			right: -150px;
+			width: 150px;
+		}
+
+		.top-level-menu > li
+		{
+			position: relative;
+			height: 50px;
+			width: 90px;
+			z-index: 100;
+		}
+		.top-level-menu > li:hover {  }
+
+		.top-level-menu li:hover > ul
+		{
+			background: #1F1F1F;
+			/* On hover, display the next level's menu */
+			display: inline;
+		}
+
+
+		/* Menu Link Styles */
+
+		.top-level-menu a /* Apply to all links inside the multi-level menu */
+		{
+			/* Make the link cover the entire list item-container */
+			display: block;
+		}
+		.top-level-menu a:hover {  }
+		.menu-left > li{
+			margin: auto;
+		}
+		</style>
+
+		<link rel="shortcut icon" href="images/gear2.png" />
+		
+	</head>
+
+	<body cz-shortcut-listen="true">
+		<nav role="navigation" style="position: fixed; top: 0; width: 100%; z-index: 100; border-bottom: solid; border-color: #444444;">
+		
+		<a class="logo" href="https://nhentai.net/"><img src="/images/logo.650c98bbb08e.svg" alt="logo" width="46" height="30"></a>
+		
+		<ul class="menu left">
+		<li class="desktop"><ul class="top-level-menu"><li>
+			<a href="#">Settings</a>
+			<ul class="second-level-menu">
+				<li>
+					<a>Language</a>
+					<ul class="third-level-menu med">
+						<li><a class="language" data-language="6346">Japanese</a></li>
+						<li><a class="language" data-language="12227">English</a></li>
+						<li><a class="language" data-language="29963">Chinese</a></li>
+						<li><a class="language" data-language="any">Any</a></li>
+					</ul>
+				</li>
+				<li>
+					<a>Item per page</a>
+					<ul class="third-level-menu big"><li><b id="IPP" style="font-size: 20px"></b><br><input id="IPPinput" style="width: 170px" type="range" min="0" max="38"/></li></ul>
+				</li>
+			</ul>
+		</li></ul></li>
+		
+		<li class="desktop"><ul class="top-level-menu"><li>
+			<a href="#">Actions</a>
+			<ul class="second-level-menu">
+				<li><a id="saveAllFav">Save all favorites</a></li>
+				<li><a id="checkNew">Check New Artworks</a></li>
+				<li><a>Check Some Number</a>
+					<ul class="third-level-menu big"><li style="height: 90px"><a id="checkNum" style="font-size: 20px">Check last 200</a><br><input id="checkNumInput" style="width: 170px" type="range" value="200" min="10" max="10000"/></li></ul>
+				</li>
+				<li><a>Delete Data</a>
+					<ul class="third-level-menu med">
+						<li><a class="deleteData">Browsing History</a></li>
+						<li><a class="deleteData">Following Tags</a></li>
+						<li><a class="deleteData">Saved Artworks</a></li>
+					</ul>
+				</li>
+				<li><a id="test">TESTS</a></li>
+			</ul>
+		</li></ul></li>
+		
+		<li class="desktop"><ul class="top-level-menu"><li>
+			<a href="#">View</a>
+			<ul class="second-level-menu">
+				<li><a>Saved Artworks</a>
+					<ul class="third-level-menu med">
+						<li><a style="font-weight: bold; background: #383838; width: 147px">Sort Order:</a></li>
+						<li><a class="savedAW">Added</a></li>
+						<li><a class="savedAW">Uploaded</a></li>
+						<li><a class="savedAW">Recommended</a></li>
+						<li><a class="savedAW">Fav Amount</a></li>
+						<li><a class="savedAW">Page Num</a></li>
+						<li><a class="savedAW">Random</a></li>
+					</ul>
+				</li>
+				<li><a class="newAW">New Artworks</a>
+				</li>
+				<li><a>Following Tags</a>
+					<ul class="third-level-menu med">
+						<li><a style="font-weight: bold; background: #383838; width: 147px">Sort Order:</a></li>
+						<li><a class="followingTags">Alphabetical</a></li>
+						<li><a class="followingTags">Frequency</a></li>
+						<li><a class="followingTags">Added</a></li>
+					</ul>
+				</li>
+				<li><a>All Tags</a>
+					<ul class="third-level-menu med">
+						<li><a style="font-weight: bold; background: #383838; width: 147px">Sort Order:</a></li>
+						<li><a class="allTags">Alphabetical</a></li>
+						<li><a class="allTags">Recommended</a></li>
+						<li><a class="allTags">Frequency</a></li>
+					</ul>
+				</li>
+				<li><a class="browsingHistory">Browsing History</a></li>
+				<li><a class="newlyUnfollowedTags">Unfollowed Tags</a></li>
+				<li><a class="newlyRemovedAW">Removed Artworks</a></li>
+			</ul>
+		</li></ul></li>
+		
+		<li class="desktop"><ul class="top-level-menu"><li>
+			<a href="#">Import/Export</a>
+			<ul class="second-level-menu">
+				<li>
+					<a>Import Data</a>
+					<ul class="third-level-menu med">
+						<li><a class="import">Artworks</a></li>
+						<li><a class="import">Following Tags</a></li>
+						<li><a class="import">Everything</a></li>
+					</ul>
+				</li>
+				<li>
+					<a>Export Data</a>
+					<ul class="third-level-menu med">
+						<li><a class="export" data-type="savedAW" data-exportName="[Nhentai Manager] Saved artworks">Artworks</a></li>
+						<li><a class="export" data-type="followingTags" data-exportName="[Nhentai Manager] Following tags">Following Tags</a></li>
+						<li><a class="export" data-type="null" data-exportName="[Nhentai Manager] All">Everything</a></li>
+					</ul>
+				</li>
+			</ul>
+		</li></ul></li>
+		
+		</ul></nav>
+		
+		<div id="messages">
+			
+		</div>
+
+		<div id="content" style="margin-top: 100px">
+	
+		<h1></h1>
+		
+		<h1></h1>
+		
+		<h1></h1>
+
+	<div class="container" id="favcontainer">
+	
+	</div>
+
+	
+
+
+
+	<section class="pagination">
+
+		
+	</section>
+
+
+
+		</div><div style="width:100%;height:100%;position:fixed;top:0;left:0;z-index:9999999;display:none;"></div>
+
+		
+		
+	
+
+</body></html>

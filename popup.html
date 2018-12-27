@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face { font-family: Batman; src: url('fonts/batman.ttf');}
+button{
+	margin-bottom: 5px;
+	width: 125px;
+	cursor: pointer;
+	text-align: center;
+	height: 35px;
+	color: #D9D9D9;
+	font-size: 14px;
+}
+.fancy{
+	background-color: #1F1F1F;
+	opacity: 0.6;
+	font-family: Batman;
+}
+.fancy:hover{
+	opacity: 0.8;
+	background-color: #383838;
+}
+body{
+	background-color: #353434;
+	color: #D9D9D9;
+}
+input{
+	width: 120px;
+	height: 30px;
+	color: #D9D9D9;
+}
+select{
+	width: 125px;
+	font-size: 15px;
+	height: 30px;
+	color: #D9D9D9;
+}
+p{
+	font-family: Batman;
+	font-size: 20px;
+}
+
+</style>
+</head>
+<body>
+	<p>nhentai manager</p>
+	
+	<button class="fancy" id="checkNew"  title="check all newly posted artworks">check new artworks</button>
+	<button class="fancy" id="search"  title="search for this artwork on nhentai">search on nhentai</button>
+	
+	<select class="fancy" id="language">
+		<option value="6346">Japanese</option>
+		<option value="12227">English</option>
+		<option value="29963">Chinese</option>
+		<option value="any">Any</option>
+	</select>
+	
+	<script src="popup.js"></script>
+</body>
+</html>
